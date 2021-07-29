@@ -6,7 +6,7 @@ let etapas =
         candidatos:
         [
             {
-                numero: 23444,
+                numero: '23444',
                 nome: 'Cleiton Azevedo',
                 partido: 'PPS',
                 fotos: 
@@ -25,7 +25,7 @@ let etapas =
         candidatos:
         [
             {
-                numero: 17,
+                numero: '17',
                 nome: 'Jair Bolsonaro',
                 partido: 'PSL',
                 fotos: 
@@ -47,7 +47,7 @@ let etapas =
         candidatos:
         [
             {
-                numero: 13,
+                numero: '13',
                 nome: 'Luís Inácio',
                 partido: 'PT',
                 fotos: 
@@ -69,7 +69,7 @@ let etapas =
         candidatos:
         [
             {
-                numero: 12,
+                numero: '12',
                 nome: 'Ciro Gomes',
                 partido: 'PDT',
                 fotos: 
