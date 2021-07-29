@@ -16,30 +16,7 @@ let etapas =
                     }
                 ]
             }
-
-        ]
-    },
-    {
-        titulo: 'PRESIDENTE',
-        numeros: 2,
-        candidatos:
-        [
-            {
-                numero: '17',
-                nome: 'Jair Bolsonaro',
-                partido: 'PSL',
-                fotos: 
-                [
-                    {
-                        url: '17.jpg', legenda: 'PRESIDENTE'
-                    },
-                    {
-                        url: '17_2.jpg', legenda: 'VICE-PRESIDENTE', small: true
-                    },
-                ]
-            }
-
-        ]
+        ],
     },
     {
         titulo: 'PRESIDENTE',
@@ -56,33 +33,39 @@ let etapas =
                         url: '13.jpg', legenda: 'PRESIDENTE'
                     },
                     {
-                        url: '13_2.jpg', legenda: 'VICE-PRESIDENTE', small: true
-                    },
+                        url: '13_2.jpg', legenda: 'VICE-PRESIDENTE'
+                    }
                 ]
-            }
-
-        ]
-    },
-    {
-        titulo: 'PRESIDENTE',
-        numeros: 2,
-        candidatos:
-        [
+            },
+            {
+                numero: '17',
+                nome: 'Jair Bolsonaro',
+                partido: 'PSL',
+                fotos: 
+                [
+                    {
+                        url: '17.jpg', legenda: 'PRESIDENTE'
+                    },
+                    {
+                        url: '17_2.jpg', legenda: 'VICE-PRESIDENTE'
+                    }
+                ]
+            },
             {
                 numero: '12',
                 nome: 'Ciro Gomes',
-                partido: 'PDT',
+                partido: 'PSL',
                 fotos: 
                 [
                     {
                         url: '12.jpg', legenda: 'PRESIDENTE'
                     },
                     {
-                        url: '12_2.jpg', legenda: 'VICE-PRESIDENTE', small: true
-                    },
+                        url: '12_2.jpg', legenda: 'VICE-PRESIDENTE'
+                    }
                 ]
             }
 
         ]
     }
-]
+];

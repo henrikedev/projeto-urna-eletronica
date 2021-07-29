@@ -7,11 +7,14 @@ let numeros = document.querySelector('.d-1-3');
 
 let  etapaAtual = 0; //Variável que define o ídice 0 do array contido em etapas.js como a etapa inicial
 let numero = '';//Variável que permite a inserção dos números digitados
+let votoBranco = false;
 
 function comecarEtapa(){
     let etapa = etapas[etapaAtual];
 
     let numeroHtml = '';
+    numero = '';
+    votoBranco = false;
 
     //montando o laço de repetição da quantidade de números da etapa
     for (let i=0; i<etapa.numeros;i++){
@@ -52,7 +55,11 @@ function atualizaInterface(){
 
         let fotosHtml = '';
         for(let i in candidato.fotos){
-            fotosHtml += `<div class="d-1-image"><img src="img/${candidato.fotos[i].url}" alt="">${candidato.fotos[i].legenda}</div>`
+            if(candidato.fotos[i].small){
+                fotosHtml += `<div class="d-1-image small"><img src="img/${candidato.fotos[i].url}" alt="">${candidato.fotos[i].legenda}</div>`
+            }else {
+                fotosHtml += `<div class="d-1-image"><img src="img/${candidato.fotos[i].url}" alt="">${candidato.fotos[i].legenda}</div>`
+            }
         }
         lateral.innerHTML = fotosHtml;
     }else{
@@ -79,13 +86,37 @@ function clicou(n){
     }
 }
 function branco(){
-    
+        numero = '';
+        votoBranco = true;
+        seuVotoPara.style.display = 'block';
+        aviso.style.display = 'block';
+        numeros.innerHTML = '';
+        descricao.innerHTML = '<div class="aviso--grande blink">VOTO EM BRANCO</div>';
+        lateral.innerHTML = '';
 }
 function corrige(){
-    
+    comecarEtapa();
 }
 function confirma(){
-    
+    let etapa = etapas[etapaAtual];
+
+    let votoConfirmado = false;
+
+    if(votoBranco === true){
+        votoConfirmado = true;
+    }else if(numero.length === etapa.numeros){
+        votoConfirmado = true;
+    }
+
+    if(votoConfirmado){
+        etapaAtual++;
+        if(etapas[etapaAtual] !== undefined){
+            comecarEtapa();
+        }else{
+
+        }
+        
+    }
 }
 
 comecarEtapa();
